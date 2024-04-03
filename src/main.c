@@ -10,9 +10,7 @@
 #include "compressor.h"
 
 typedef int dataType; // Change this to your desired data type
-void delay_ms(int ms) {
-    k_msleep(ms);
-}
+
 
 #define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
 
@@ -357,21 +355,9 @@ int main(int argc, char *argv[])
 		}
 	}
 
-	//for (;;){
+	
 benchmark_compressor(readings, size_of_readings_array);
-delay_ms(3000);
-benchmark_compressor(readings, size_of_readings_array);
-delay_ms(3000);
-benchmark_compressor(readings, size_of_readings_array);
-delay_ms(3000);
-benchmark_compressor(readings, size_of_readings_array);
-delay_ms(3000);
-benchmark_compressor(readings, size_of_readings_array);
-delay_ms(3000);
-benchmark_compressor(readings, size_of_readings_array);
-	 
-
-	// benchmark_decompressor(data, data_len);
+benchmark_decompressor(data, data_len);
 
 	return 0;
 }
